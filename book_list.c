@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct book   
-{  
-    char name[500];  
-    char author[500];
+struct book{  
+    char *name;  
+    char *author;
     struct book *next;   
-}; 
+}book; 
 
 struct book *head; 
 
@@ -70,8 +69,10 @@ void create(){
             scanf("%s" , bname);
             printf("\nEnter book author : ");
             scanf("%s" , bauth);
+            b->name = malloc(10 + sizeof(b->name));
+            b->author = malloc(10 + sizeof(b->author));
             strcpy(b->name, bname); 
-            strcpy(b->author, bauth); 
+            strcpy(b->author, bauth);
             b->next = NULL;
             head = b;
             printf("\nlist created\n");
@@ -97,6 +98,8 @@ void insert(){
             scanf("%s" , bname);
             printf("\nEnter book author : ");
             scanf("%s" , bauth);
+            b->name = malloc(10 + sizeof(b->name));
+            b->author = malloc(10 + sizeof(b->author));
             strcpy(b->name, bname); 
             strcpy(b->author, bauth);
             temp = head;  
@@ -115,7 +118,6 @@ void traverse()
 {  
     struct book *b = head;
 	
-   //start from the beginning
    while(b != NULL) {
       printf("\n%s\n",b->name);
       printf("%s\n",b->author);
