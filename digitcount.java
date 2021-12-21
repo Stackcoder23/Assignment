@@ -13,5 +13,6 @@ class digitcount{
         for(int i=0;i<arr.length;i++)
             if(arr[i]>0)
                 System.out.println(i + " : " + arr[i]);
+        sc.close();
     }
 }

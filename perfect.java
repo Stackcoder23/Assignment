@@ -19,5 +19,6 @@ class perfect{
             else
                 System.out.print("Not a perfect number");
         }
+        sc.close();
     }
 }

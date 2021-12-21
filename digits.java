@@ -10,5 +10,6 @@ class digits{
             count++;
         }
         System.out.print(count);
+        sc.close();
     }
 }

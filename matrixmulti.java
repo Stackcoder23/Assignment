@@ -30,5 +30,6 @@ class matrixmulti{
             }
             System.out.println("");
         }
+        sc.close();
     }
 }

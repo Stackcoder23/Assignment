@@ -90,5 +90,6 @@ class numtowords{
             d++;
         }
         System.out.println(word);
+        sc.close();
     }
 }
