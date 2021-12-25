@@ -24,7 +24,7 @@ How to run : -
         to run - "java program_name" - eg. "java digits"
 
     JavaScript programs:
-        run - "node prigram_name" - eg. "node brackets"
+        run - "node program_name" - eg. "node brackets"
 
     C/C++ programs:
         I couldn't run it on replit. can run it on vscode or any c/cpp compiler
