@@ -1,0 +1,480 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                outline: none;
+                font-family: 'Spline Sans', sans-serif; ;
+            }
+            div,h2,h4,p {
+                border-radius: 5px;
+                font-weight: normal;
+            }
+            li {
+                list-style: none;
+            }
+            nav {
+                /* width: 100%;
+                top: 0;
+                position: fixed; */
+                background-color: rgba(0, 0, 0, 0.836);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                height: 50px;
+                padding: 0 80px;
+                color: white;
+            }
+            nav .logo {
+                font-size: 30px;
+                font-weight: 600;
+            }
+            nav .items {
+                height: 100%;
+                display: flex;
+                flex: 1;
+                padding: 0 0 0 20px;
+            }
+            nav .items li {
+                line-height: 30px;
+                height: 100%;
+                padding: 10px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            nav .items li:hover {
+                background-color: black;
+            }
+            nav form {
+                font-size: smaller;
+                display: flex;
+                height: 30px;
+            }
+            nav form input {
+                margin: 0 2px;
+                border: none;
+                border-radius: 6px;
+                width: 150px;
+                padding: 10px;
+            }
+            nav form button {
+                line-height: 10px;
+                margin: 0 2px;
+                border: none;
+                border-radius: 6px;
+                padding: 10px;
+            }
+            .body {
+                margin: 8% 3% 5% 3%;
+                display: flex;
+                flex-direction: row;
+            }
+            .first {
+                color: rgb(94, 91, 91);
+                width: 25%;
+                margin-right: 3%;
+            }
+            .first div {
+                margin: 0 0 5% 0;
+            }
+            .first div h4 {
+                background-color: rgba(128, 128, 128, 0.267);
+                border: 1px ridge rgba(128, 128, 128, 0.082);
+                padding: 7px;
+            }
+            .first div li span {
+                font-weight: bold;
+                color: white;
+                font-size: 12px;
+                background-color: grey;
+                padding: 2px 5px;
+                float: right;
+                border-radius: 20px;
+            }
+            .first div li,p {
+                border: 0.5px ridge rgba(128, 128, 128, 0.322);
+                padding: 9px;
+            }
+            .first p {
+                border: 0.5px ridge rgba(128, 128, 128, 0.322);
+                padding: 9px 15% 9px 9px;
+            }
+            .first button {
+                margin: 3% 0;
+                padding: 5px;
+            }
+            .second {
+                width: 45%;
+                margin-right: 3%;
+            }
+            .second .red {
+                color: rgb(150, 3, 3);
+                background-color: rgba(255, 0, 0, 0.192);
+                padding: 12px;
+                font-size: 14px;
+                border: 0.5px ridge rgba(128, 128, 128, 0.322);
+            }
+            .second .red i {
+                float: right;
+                opacity: 50%;
+            }
+            .second .imgtext {
+                margin-top: 2%;
+                display: flex;
+                flex-direction: row;
+            }
+            .second .img {
+                color: rgba(128, 128, 128, 0.986);
+                text-align: center;
+                line-height: 120px;
+                margin: 2% 0;
+                flex: 0 0 8em;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(128, 128, 128, 0.308);
+            }
+            .second .text {
+                margin: 2%;
+            }
+            .text p {
+                font-size: 15px;
+                border: none;
+                padding: 0%;
+                margin-top: 2%;
+            }
+            .p {
+                color: grey;
+            }
+            .commshare {
+                display: flex;
+                color: rgb(0, 119, 255);
+            }
+            .third {
+                width: 20%;
+            }
+            .third form {
+                font-size: smaller;
+                display: flex;
+                height: 30px;
+            }
+            .third form input {
+                margin: 0 2px;
+                border: 1px solid rgba(128, 128, 128, 0.37);
+                border-radius: 6px;
+                width: 180px;
+                padding: 10px;
+            }
+            .third form button {
+                border: 1px solid rgba(128, 128, 128, 0.37);
+                background-color: white;
+                line-height: 10px;
+                margin: 0 2px;
+                border-radius: 6px;
+                padding: 10px;
+            }
+            .third div h4 {
+                color: rgb(97, 96, 96);
+                background-color: rgba(128, 128, 128, 0.267);
+                border: 1px ridge rgba(128, 128, 128, 0.082);
+                padding: 7px;
+            }
+            .third div li,p {
+                border: 0.5px ridge rgba(128, 128, 128, 0.322);
+                padding: 9px;
+            }
+            .bars {
+                margin-top: 0%;
+                width: 100%;
+                padding: 5%;
+                border: 1px ridge rgba(128, 128, 128, 0.24);
+            }
+            .progress {
+                margin: 7% 1%;
+                background-color: rgba(128, 128, 128, 0.226);
+                font-size: 12px;
+                border-radius: 7px;
+                color: white;
+                width: 99%;
+            }
+            .hundred {
+                width: 100%;
+                background-color: rgb(44, 124, 19);
+                padding: 2%;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .eighty {
+                width: 80%;
+                background-color: rgb(35, 176, 231);
+                padding: 2%;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .fourfive {
+                width: 45%;
+                background-color: orange;
+                padding: 2%;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .threefive {
+                width: 35%;
+                background-color: red;
+                padding: 2%;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .p2 {
+                padding: 7%;
+                font-size: smaller;
+                color: rgb(97, 96, 96);
+            }
+            .b1,.b2,.b3 {
+                margin: 3% 0;
+                padding: 5px;
+                font-size:medium;
+            }
+            .b1,.b3 {
+                border: 1px ridge rgba(128, 128, 128, 0.486);
+            }
+            .b2 {
+                border-bottom: 1px ridge rgba(128, 128, 128, 0.486);
+            }
+            .body2 {
+                font-weight: 100;
+                width: 100%;
+                background-color: rgba(128, 128, 128, 0.247);
+                padding: 2%;
+                display: flex;
+                flex-direction: row;
+            }
+            .body2 div {
+                width: 25%;
+                padding: 2%;
+            }
+            .body2 p {
+                font-size: medium;
+                border: none;
+                margin: 0;
+                padding: 0;
+                margin-top: 3%;
+            }
+            .body2 button {
+                margin: 3% 0;
+                padding: 5px;
+            }
+            .grid {
+                margin-top: 2%;
+                grid-column-gap: 30px;
+                grid-row-gap: 30px;
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+            .grid div {
+                color: rgb(112, 112, 112);
+                text-align: center;
+                line-height: 50px;
+                width: 110px;
+                height: 80px;
+                padding: 10%;
+                border: 4px solid white;
+            }
+            footer {
+                text-align: center;
+                padding: 3%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="fa fa-globe"></i> Logo
+            </div>
+            <div class="items">
+                <li>Home</li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Services &nbsp;<i class="fa fa-caret-down"></i></li>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Email"/>
+                <input type="text" placeholder="Password"/>
+                <button>Sign in</button>
+            </form>
+        </nav>
+        <div class="body">
+            <div class="first">
+                <div class="synergize">
+                   <h4><i class="fa fa-random"></i> Completely Synergize</h4>
+                   <li>Resource taxing</li>
+                   <li>Premiere niche markets <span>New</span></li>
+                   <li>Dynamically Innovate</li>
+                   <li>Objectively Innovate</li>
+                   <li>Proactively Envisioned</li> 
+                </div>
+                <div class="dramatic">
+                    <h4><i class="fa fa-cog"></i> Dramatically Engage</h4>
+                    <p>Objectively innovate empowered
+                        manufactured products whereas
+                        parallel platforms. Holisticly
+                        predominate extensible testing
+                        procedures for reliable supply chains.
+                        Dramatically engage top-line web
+                        services vis-a-vis cutting-edge
+                        deliverables. <br>
+                        <button>Engage</button>
+                    </p>
+                </div>
+            </div>
+            <div class="second">
+                <div class="red">
+                    <b>Synergize</b>: Seamlessly bisualize quality intellectual capital! <i class="fa fa-times"></i>
+                </div>
+                <div class="imgtext">
+                    <div class="img">120x120</div>
+                    <div class="text">
+                        <h2 style="font-weight: normal;">Premier Niche Markets</h2>
+                        <p class="p">Phosfluorescently engage worldwide methodologies with web-enabled
+                        technology. Interactively coordinate proactive e-commerce via process-
+                        centric "outside the box" thinking. Completely pursue scalable customer
+                        service through sustainable potentialities.</p>
+                        <div class="commshare">
+                            <p><i class="fa fa-comment"></i> 2 Comments&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p><i class="fa fa-share-square-o"></i> 8 shares</p>
+                        </div>
+                    </div>
+                </div><br><br>
+                <hr style="opacity: 30%;">
+                <div class="imgtext">
+                    <div class="img">120x120</div>
+                    <div class="text">
+                        <h2 style="font-weight: normal;">Proactively Envisioned</h2>
+                        <p class="p">Seamiessly wsualie quaty Fisiectul Capta vt superr
+                            Cotaboraon nd e e, olsucaly poncale nsiake base
+                            o A marta e OIS P09 e A
+                            Dased capertioe ar cross. medm rowth stateges.</p>
+                        <div class="commshare">
+                            <p><i class="fa fa-comment"></i> 12 Comments&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p><i class="fa fa-share-square-o"></i> 18 shares</p>
+                        </div>
+                    </div>
+                </div><br><br>
+                <hr style="opacity: 30%;">
+                <div class="imgtext">
+                    <div class="img">120x120</div>
+                    <div class="text">
+                        <h2 style="font-weight: normal;">Completely Synergize</h2>
+                        <p class="p">Completely synergize resource taxing relationships via premier niche
+                            markets. Professionally cultivate one-to-one customer service with robust
+                            ideas. Dynamically innovate resource-leveling customer service for state
+                            of the art customer service.
+                            </p>
+                        <div class="commshare">
+                            <p><i class="fa fa-comment"></i> 23 Comments&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p><i class="fa fa-share-square-o"></i> 22 shares</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third">
+                <form action="#">
+                    <input type="text"/>
+                    <button>Search</button>
+                </form>
+                <br>
+                <div class="dramatic">
+                    <h4><i class="fa fa-tachometer"></i> Dramatically Engage</h4>
+                    <div class="bars">
+                        <div class="progress">
+                            <div class="hundred">
+                                100% Proactively Envisioned
+                            </div>
+                        </div>  
+                        <div class="progress">
+                            <div class="eighty">
+                                80% Objectively Innovated
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="fourfive">
+                                45% Portalled
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="threefive">
+                                35% Done
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div style="margin-top: 8%;">
+                    <h4><i class="fa fa-bullhorn"></i> Active Predomination</h4>
+                    <p class="p2">Proactively envisioned multimedia
+                        based expertise and cross-media
+                        growth strategies.
+                        <br><br>
+                    <span class="b1">Resource</span><span class="b2">Envision</span><span class="b3">Niche</span>
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="body2">
+            <div>
+                <h2> <span style="font-size: 20;">T</span><span style="font-size: 40;margin-left: -5px;">T</span> Dynamic</h2>
+                <p>Collaboratively administrate empowered
+                    markets via plug-and-play networks.
+                    Dynamically procrastinate B2C users
+                    after installed base benefits
+                    Dramatically visualize customer directed
+                    convergence without revolutionary ROI
+                    </p>
+                <button>procrastinate</button>
+            </div>
+            <div>
+                <h2><i class="fa fa-wrench"></i> Efficient</h2>
+                <p>Dramatically maintain clicks-and-mortar
+                    solutions without functional solutions.
+                    Efficiently unleash cross-media
+                    information without cross-media value.
+                    Quickly maximize timely deliverables for
+                    real-time schemas.                    
+                    </p>
+                <button>Unleash</button>
+            </div>
+            <div>
+                <h2><i class="fa fa-paperclip"></i> Complete</h2>
+                <p>Professionally cultivate one-to-one
+                    customer service with robust ideas.
+                    Completely synergize resource taxing
+                    relationships via premier niche markets.
+                    Dynamically innovate resource-leveling
+                    customer service for state of the art
+                    customer service.                       
+                    </p>
+                <button>Complete</button>
+            </div>
+            <div>
+                <h2><i class="fa fa-camera"></i> Phosfluorescent</h2>
+                <div class="grid">
+                    <div>110x80</div>
+                    <div>110x80</div>
+                    <div>110x80</div>
+                    <div>110x80</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <a href="#">Terms and Conditions </a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
+            </div><br>
+            <div>
+                Copyright © Example.com 2015
+            </div>
+        </footer>
+    </body>
+</html>

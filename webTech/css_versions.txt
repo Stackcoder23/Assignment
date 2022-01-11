@@ -1,0 +1,19 @@
+CSS version history : -
+
+CSS 1 - 
+    Support for : 
+    - Font properties 
+    - Color of texts 
+    - Backgrounds and other elemets
+    - Text attributes such as spacing between words, letters, and lines of text
+    - Alignment of text, images, tables and other elements
+    - Margin, border, padding, and positioning for most elements
+
+CSS 2 -
+    New capabilities like absolute, relative, and fixed positioning of elements and z-index, 
+    the concept of media types, support for aural style sheets and bidirectional text, 
+    and new font properties such as shadows.
+
+CSS 3 -
+    It is divided into several separate documents called "modules".
+    Each module adds new capability or extends features defined in CSS 2, over preserving backward compatibility.

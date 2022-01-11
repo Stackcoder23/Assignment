@@ -1,0 +1,22 @@
+HTML version history : -
+
+HTML 1 -
+    It was developed in 1993. came with the support for basic elements like texts and images.
+
+HTML 2 -
+    It was developed in 1995. It came up with the concept of form. The table came as an html tag.
+    W3C was formed and browsers came with the concept of creating their own layers of tags that
+    were specific to browser itself.
+
+HTML 3.2 -
+    It was developed in 1997. cam with a better support for new form elements. implemented support for CSS.
+    browsers supported frame tags.
+
+HTML 4.01 -
+    It was developed in 1999. cam with the support for external style sheets. 
+    Also came up with many new HTML tags.
+
+HTML 5 -
+    Provided support for new form elements like input elements of different types, geolocations support tags.
+    few of the tags which were added : 
+        - Email, Password, Audio, Video, Section.
